@@ -16,9 +16,14 @@ export class AdminService {
       .post<any>(adminloginurl, { username, password })
   }
 
-  adddoctor(doctor:Doctor){
+  adddoctor(doctor:Doctor):Observable<any>{
     const adddoctorurl='http://localhost:8080/admin/add-doctor'
     return this.http.post(adddoctorurl,doctor)
+  }
+
+  getalldoctors():Observable<any[]>{
+    const getalldoctorsurl='http://localhost:8080/admin/get-all-doctors'
+    return  this.http.get<any[]>(getalldoctorsurl)
   }
 
 }

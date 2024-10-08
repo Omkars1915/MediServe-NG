@@ -6,6 +6,7 @@ import { AdminhomeComponent } from './components/adminhome/adminhome.component';
 import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
 import { DoctorhomeComponent } from './components/doctorhome/doctorhome.component';
 import { AdddoctorComponent } from './components/adddoctor/adddoctor.component';
+import { GetalldoctorsComponent } from './components/getalldoctors/getalldoctors.component';
 
 export const routes: Routes = [
     {
@@ -28,6 +29,9 @@ export const routes: Routes = [
     },
     {
         path:'adddoctor', component:AdddoctorComponent
+    },
+    {
+        path:'getalldoctors',component:GetalldoctorsComponent
     }
 
 ];

@@ -1,0 +1,37 @@
+<app-adminhome></app-adminhome>
+<br>
+<table class="table table-sm table-light">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">specialization</th>
+        <th scope="col">Email</th>
+        <th scope="col">contactNumber</th>
+        <th scope="col">password</th>
+        <th scope="col">Action</th>
+
+      
+      </tr>
+    </thead>
+    <tbody>
+      
+       
+      <tr *ngFor="let doctor of doctors">
+        <td>{{doctor.id}}</td>
+        <td>{{doctor.firstName}}</td>
+        <td>{{doctor.lastName}}</td>
+        <td>{{ doctor.specialization }}</td>
+        <td>{{ doctor.email }}</td>
+        <td>{{ doctor.contactNumber }}</td>
+        <td>{{ doctor.password }}</td>
+      
+        <th><a class="btn btn-danger"
+          >DELETE</a>&nbsp; <a
+          class="btn btn-success" href="/editstudent/${doct].firstName}">EDIT</a>
+        </th>
+    
+      </tr>
+    </tbody>
+  </table>
