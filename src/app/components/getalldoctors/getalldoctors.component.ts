@@ -25,4 +25,13 @@ export class GetalldoctorsComponent implements OnInit{
       this.doctors=response;
     })
   }
+
+  deletedoctor(id:number){
+    this.adminservice.deletedoctor(id).subscribe((response)=>{
+      alert('Doctor deleted successfully');
+      // window.location.href='/getallusers'
+      window.location.reload()
+  })
+}
+
 }

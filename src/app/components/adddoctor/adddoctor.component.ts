@@ -5,11 +5,12 @@ import { Doctor } from '../../models/doctor/doctor.module';
 import { response } from 'express';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AdminhomeComponent } from "../adminhome/adminhome.component";
 
 @Component({
   selector: 'app-adddoctor',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule, AdminhomeComponent],
   templateUrl: './adddoctor.component.html',
   styleUrl: './adddoctor.component.css'
 })
@@ -28,7 +29,7 @@ export class AdddoctorComponent {
   addDoctor(){
     this.adminservice.adddoctor(this.doctor).subscribe((response)=>{
       alert("Doctor addes")
-      this.router.navigate(['/adminhome'])
+      this.router.navigate(['/getalldoctors'])
     })
   }
 

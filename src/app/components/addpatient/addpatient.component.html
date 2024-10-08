@@ -1,0 +1,74 @@
+<app-doctorhome></app-doctorhome>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<form (ngSubmit)="addpatient()">
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="./assets/img/image.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from earning your own money!</p>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                      
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Patient Registration</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Patient Id</label><br>
+                                            <input type="number" class="form-control" placeholder="Id *" [(ngModel)]="patient.id" name="id" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  First Name</label><br>
+                                            <input type="text" class="form-control" placeholder="First Name *" [(ngModel)]="patient.firstName" name="firstName" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Last Name</label><br>
+                                            <input type="text" class="form-control" placeholder="Last Name *" [(ngModel)]="patient.lastName" name="lastName" required />
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Contact No</label><br>
+                                            <input type="text" class="form-control" placeholder="Contact No *" [(ngModel)]="patient.contactNumber" name="contactNumber" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Address</label><br>
+                                            <input type="text" class="form-control" placeholder="Address *" [(ngModel)]="patient.address" name="Address" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Email</label><br>
+                                            <input type="email" class="form-control" placeholder="Your Email *" [(ngModel)]="patient.email" name="email" required />
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label>  &nbsp;   Gender</label><br>
+                                            <select class="form-control" [(ngModel)]="patient.gender" placeholder="Gender" name="gender">
+                                                <option class="hidden"  selected disabled>Please select Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="TransGender">TransGender</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Date of Birth</label><br>
+                                            <input type="date"  name="dob" class="form-control" placeholder="Date of Birth *" [(ngModel)]="patient.dob" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Password</label><br>
+                                            <input type="password"  name="password" class="form-control" placeholder="password *" [(ngModel)]="patient.password" required />
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Add User"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form> 

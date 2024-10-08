@@ -17,13 +17,17 @@ export class AdminService {
   }
 
   adddoctor(doctor:Doctor):Observable<any>{
-    const adddoctorurl='http://localhost:8080/admin/add-doctor'
+    const adddoctorurl='http://localhost:8080/doctor/add-doctor'
     return this.http.post(adddoctorurl,doctor)
   }
 
   getalldoctors():Observable<any[]>{
-    const getalldoctorsurl='http://localhost:8080/admin/get-all-doctors'
+    const getalldoctorsurl='http://localhost:8080/doctor/get-all-doctors'
     return  this.http.get<any[]>(getalldoctorsurl)
   }
 
+  deletedoctor(id:number):Observable<void>{
+    const deletedoctorurl='http://localhost:8080/doctor/delete-doctor'
+    return this.http.delete<void>(`${deletedoctorurl}/${id}`)
+  }
 }

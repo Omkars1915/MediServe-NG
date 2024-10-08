@@ -7,6 +7,8 @@ import { AdminloginComponent } from './components/adminlogin/adminlogin.componen
 import { DoctorhomeComponent } from './components/doctorhome/doctorhome.component';
 import { AdddoctorComponent } from './components/adddoctor/adddoctor.component';
 import { GetalldoctorsComponent } from './components/getalldoctors/getalldoctors.component';
+import { AddpatientComponent } from './components/addpatient/addpatient.component';
+import { GetallpatientsComponent } from './components/getallpatients/getallpatients.component';
 
 export const routes: Routes = [
     {
@@ -32,6 +34,12 @@ export const routes: Routes = [
     },
     {
         path:'getalldoctors',component:GetalldoctorsComponent
+    },
+    {
+        path:'addpatient',component:AddpatientComponent
+    },
+    {
+        path:'getallpatients',component:GetallpatientsComponent
     }
 
 ];

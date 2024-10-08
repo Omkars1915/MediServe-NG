@@ -13,4 +13,5 @@ export class DoctorService {
     const doctorloginurl='http://localhost:8080/doctor/login-doctor'
     return this.http.post<any>(doctorloginurl,{id,password})
   }
+  
 }
