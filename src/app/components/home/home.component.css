@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fhospital&psig=AOvVaw23H91v9XscVrYwu5cvjADc&ust=1728244179501000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDxlbWB-IgDFQAAAAAdAAAAABAE') no-repeat center center fixed; /* Replace with your image URL */
+    background-size: cover;
+    animation: backgroundAnimation 20s ease-in-out infinite;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin: 10px auto;
+    margin-bottom: 30px;
+}
+
+.login-btn {
+  
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.login-btn1 {
+    width: 400px; /* Example: fixed width */
+    margin: 10px auto;
+    padding: 12px 0;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn1:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+

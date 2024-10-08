@@ -1,0 +1,70 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<form (ngSubmit)="addDoctor()">
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="./assets/img/image.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from earning your own money!</p>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                      
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Doctor Registration</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Doctor Id</label><br>
+                                            <input type="number" class="form-control" placeholder="Id *" [(ngModel)]="doctor.id" name="id" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  First Name</label><br>
+                                            <input type="text" class="form-control" placeholder="First Name *" [(ngModel)]="doctor.firstName" name="firstName" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Last Name</label><br>
+                                            <input type="text" class="form-control" placeholder="Last Name *" [(ngModel)]="doctor.lastName" name="lastName" required />
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Contact No</label><br>
+                                            <input type="text" class="form-control" placeholder="Contact No *" [(ngModel)]="doctor.contactNumber" name="contactNumber" required />
+                                       
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Email</label><br>
+                                            <input type="email" class="form-control" placeholder="Your Email *" [(ngModel)]="doctor.email" name="email" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Password</label><br>
+                                            <input type="password"  name="password" class="form-control" placeholder="password *" [(ngModel)]="doctor.password" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;   specialization</label><br>
+                                            <select class="form-control" [(ngModel)]="doctor.specialization" name="specialization">
+                                                <option class="hidden"  selected disabled>Please select specialization</option>
+                                                <option value="Cardiology">Cardiology</option>
+                                                <option value="Dermatology">Dermatology</option>
+                                                <option value="Neurology">Neurology</option>
+                                                <option value="Oncology">Oncology</option>
+                                                <option value="Orthopedics">Orthopedics</option>
+                                                <option value="Pediatrics">Pediatrics</option>
+                                            </select>
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Add User"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form> 
