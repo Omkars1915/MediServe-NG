@@ -4,7 +4,7 @@ import { PatientService } from '../../services/patient.service';
 import { Router } from '@angular/router';
 import { Patient } from '../../models/patient/patient.module';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-addpatient',
@@ -28,6 +28,7 @@ export class AddpatientComponent {
   }
 
   constructor(private patientservice:PatientService,private router:Router){}
+
   addpatient(){
     this.patientservice.addpatient(this.patient).subscribe((response)=>{
       alert("Patient added")

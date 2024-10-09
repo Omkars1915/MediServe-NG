@@ -1,2 +1,34 @@
+<br>
+<table class="table table-sm table-light">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">contactNumber</th>
+            <th scope="col">password</th>
+            <th scope="col">Address</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let patient of patients">
+            <td>{{patient.id}}</td>
+            <td>{{patient.firstName}}</td>
+            <td>{{patient.lastName}}</td>
+            <td>{{ patient.gender }}</td>
+            <td>{{ patient.email }}</td>
+            <td>{{ patient.dob }}</td>
+            <td>{{ patient.contactNumber }}</td>
+            <td>{{ patient.password }}</td>
+            <td>{{ patient.address }}</td>
 
-<p>getallpatients works!</p>
+            <th><a class="btn btn-danger" (click)="deletepatient(patient.id)" >DELETE</a>&nbsp; <a class="btn btn-success"
+                    href="/editstudent/${doct].firstName}">EDIT</a>
+            </th>
+        </tr>
+    </tbody>
+</table>

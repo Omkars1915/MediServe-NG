@@ -12,8 +12,13 @@ constructor(private http:HttpClient){}
 
 
   addpatient(patient:Patient):Observable<any>{
-    const addpatienturl='http://localhost:8080/doctor/add-patient'
+    const addpatienturl='http://localhost:8080/patient/add-patient'
     return this.http.post<any>(addpatienturl,patient)
+  }
+
+  getallpatient():Observable<any>{
+    const getallpatienturl='http://localhost:8080/patient/getallpatients'
+    return this.http.get<any>(getallpatienturl)
   }
 }
 
