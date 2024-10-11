@@ -6,11 +6,12 @@ import { Router } from '@angular/router';
 import { response } from 'express';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AdminhomeComponent } from "../adminhome/adminhome.component";
 
 @Component({
   selector: 'app-getallpatients',
   standalone: true,
-  imports: [DoctorComponent, DoctorhomeComponent,FormsModule,CommonModule],
+  imports: [DoctorComponent, DoctorhomeComponent, FormsModule, CommonModule, AdminhomeComponent],
   templateUrl: './getallpatients.component.html',
   styleUrl: './getallpatients.component.css'
 })
