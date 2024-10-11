@@ -20,5 +20,10 @@ constructor(private http:HttpClient){}
     const getallpatienturl='http://localhost:8080/patient/getallpatients'
     return this.http.get<any>(getallpatienturl)
   }
+
+  searchpatient(id: number): Observable<any> {
+    const searchpatienturl = `http://localhost:8080/patient/get-patient-by-id/${id}`;
+    return this.http.get<any>(searchpatienturl);
+  }
 }
 

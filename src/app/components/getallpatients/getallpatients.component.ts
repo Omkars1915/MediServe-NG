@@ -21,6 +21,7 @@ export class GetallpatientsComponent implements OnInit {
     constructor(private patientservice:PatientService, private router:Router){}
   ngOnInit(): void {
   this.getallpatients()
+  // this.searchpatient()
   }
 
     getallpatients(){
@@ -31,5 +32,11 @@ export class GetallpatientsComponent implements OnInit {
     deletepatient(id:number) {
 
     }
-    
+   id!: number;
+   searchpatient(){
+     this.patientservice.searchpatient(this.id).subscribe((response)=>{
+       console.log(response);
+       this.patients=Array.isArray(response) ? response : [response];
+     })
+   }
 }

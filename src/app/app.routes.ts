@@ -10,6 +10,7 @@ import { GetalldoctorsComponent } from './components/getalldoctors/getalldoctors
 import { AddpatientComponent } from './components/addpatient/addpatient.component';
 import { GetallpatientsComponent } from './components/getallpatients/getallpatients.component';
 
+
 export const routes: Routes = [
     {
         path:'', component:HomeComponent

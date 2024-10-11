@@ -1,4 +1,19 @@
+<app-doctorhome></app-doctorhome>
 <br>
+<!-- Filter options -->
+<div class="form-group">
+    <!-- Patient Name Search -->
+    <div class="col-md-6">
+        <div class="button-container">
+      <label for="patientName">Enter Patient Id</label>
+      <input type="number" class="form-control" placeholder="Patient id" [(ngModel)]="id"> &nbsp;  &nbsp;
+      <button class="btn btn-primary search-btn" (click)="searchpatient()">Search Patient</button>  &nbsp;  &nbsp;
+      <button class="btn btn-primary search-btn" (click)="getallpatients()">Get All Patient</button>
+    </div>
+    </div>
+    <!-- Search Button -->
+     
+  </div>
 <table class="table table-sm table-light">
     <thead>
         <tr>
