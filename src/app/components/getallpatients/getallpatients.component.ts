@@ -30,14 +30,18 @@ export class GetallpatientsComponent implements OnInit {
         this.patients=response;
       })
     }
+    
     deletepatient(id:number) {
 
     }
    id!: number;
    searchpatient(){
      this.patientservice.searchpatient(this.id).subscribe((response)=>{
-       console.log(response);
+      if(response!=null){
        this.patients=Array.isArray(response) ? response : [response];
+      }else{
+        alert("Patient not found")
+      }
      })
    }
 }

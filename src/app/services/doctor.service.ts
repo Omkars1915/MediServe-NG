@@ -13,5 +13,10 @@ export class DoctorService {
     const doctorloginurl='http://localhost:8080/doctor/login-doctor'
     return this.http.post<any>(doctorloginurl,{id,password})
   }
+
+  getdoctorbyid(id:number):Observable<any>{
+    const getdoctorbyidurl=`http://localhost:8080/doctor/get-doctor-by-id/${id}`
+    return this.http.get<any>(getdoctorbyidurl)
+  }
   
 }

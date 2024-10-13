@@ -1,5 +1,17 @@
 <app-adminhome></app-adminhome>
 <br>
+<div class="form-group">
+    <!-- Patient Name Search -->
+    <div class="col-md-6">
+        <div class="button-container">
+      <label for="patientName">Enter Doctor Id </label>
+      <input type="number" class="form-control" placeholder="Doctor id" [(ngModel)]="id"> &nbsp;  &nbsp;
+      <button class="btn btn-primary search-btn" (click)="searchdoctor()">Search Doctor</button>  &nbsp;  &nbsp;
+      <button class="btn btn-primary search-btn" (click)="getalldoctors()">Get All Doctors</button>
+    </div>
+    </div>
+    <!-- Search Button --> 
+  </div>
 <table class="table table-sm table-light">
     <thead>
         <tr>

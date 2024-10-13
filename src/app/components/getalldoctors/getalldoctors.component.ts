@@ -4,7 +4,9 @@ import { AdminhomeComponent } from "../adminhome/adminhome.component";
 import { AdminService } from '../../services/admin.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { response } from 'express';
+import e, { response } from 'express';
+import { DoctorComponent } from '../doctorlogin/doctor.component';
+import { DoctorService } from '../../services/doctor.service';
 
 @Component({
   selector: 'app-getalldoctors',
@@ -15,9 +17,9 @@ import { response } from 'express';
 })
 export class GetalldoctorsComponent implements OnInit{
 
-  constructor(private adminservice:AdminService){}
+  constructor(private adminservice:AdminService, private doctorservice:DoctorService){}
   ngOnInit(): void {
-    this.getalldoctors();
+    // this.getalldoctors();
   }
   doctors:any[]=[]
   getalldoctors(){
@@ -31,6 +33,18 @@ export class GetalldoctorsComponent implements OnInit{
       alert('Doctor deleted successfully');
       // window.location.href='/getallusers'
       window.location.reload()
+  })
+}
+
+id!:number
+
+searchdoctor(){
+  this.doctorservice.getdoctorbyid(this.id).subscribe((response)=>{
+if(response!=null){
+    this.doctors = Array.isArray(response) ? response : [response];
+}else{
+  alert("Doctor not found")
+}
   })
 }
 
