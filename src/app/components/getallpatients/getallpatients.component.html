@@ -2,9 +2,11 @@
 <br>
 <!-- Filter options -->
 <div class="form-group">
+    <button class="btn btn-primary search-btn" (click)="back()">Back</button>
     <!-- Patient Name Search -->
     <div class="col-md-6">
         <div class="button-container">
+            
       <label for="patientName">Enter Patient Id </label>
       <input type="number" class="form-control" placeholder="Patient id" [(ngModel)]="id"> &nbsp;  &nbsp;
       <button class="btn btn-primary search-btn" (click)="searchpatient()">Search Patient</button>  &nbsp;  &nbsp;

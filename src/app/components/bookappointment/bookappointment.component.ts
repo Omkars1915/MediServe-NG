@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { Appointment } from '../../models/appointment/appointment.module';
 import { response } from 'express';
 import { DoctorhomeComponent } from "../doctorhome/doctorhome.component";
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-bookappointment',
   standalone: true,
@@ -14,8 +15,11 @@ import { DoctorhomeComponent } from "../doctorhome/doctorhome.component";
   styleUrl: './bookappointment.component.css'
 })
 export class BookappointmentComponent {
+back() {
+this.location.back()
+}
 
-  constructor(private appointmentservice:AppointmentService,private router:Router){}
+  constructor(private appointmentservice:AppointmentService,private router:Router,private location:Location){}
   appointment = {
     date: '',
     time: '',

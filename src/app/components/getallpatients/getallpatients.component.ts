@@ -7,6 +7,7 @@ import { response } from 'express';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AdminhomeComponent } from "../adminhome/adminhome.component";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-getallpatients',
@@ -17,9 +18,14 @@ import { AdminhomeComponent } from "../adminhome/adminhome.component";
 })
 export class GetallpatientsComponent implements OnInit {
 
+  constructor(private patientservice:PatientService, private router:Router,private location:Location){}
+
+back() {
+this.location.back()
+}
+
   patients: any[]=[]
 
-    constructor(private patientservice:PatientService, private router:Router){}
   ngOnInit(): void {
   this.getallpatients()
   // this.searchpatient()
@@ -30,7 +36,7 @@ export class GetallpatientsComponent implements OnInit {
         this.patients=response;
       })
     }
-    
+
     deletepatient(id:number) {
 
     }

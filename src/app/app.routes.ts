@@ -11,6 +11,7 @@ import { AddpatientComponent } from './components/addpatient/addpatient.componen
 import { GetallpatientsComponent } from './components/getallpatients/getallpatients.component';
 import { BookappointmentComponent } from './components/bookappointment/bookappointment.component';
 import { GetallappointmentsComponent } from './components/getallappointments/getallappointments.component';
+import { PatienthomeComponent } from './components/patienthome/patienthome.component';
 
 
 export const routes: Routes = [
@@ -49,6 +50,9 @@ export const routes: Routes = [
     },
     {
         path:'getallappointments',component:GetallappointmentsComponent
+    },
+    {
+        path:'patienthome',component:PatienthomeComponent
     }
 
 ];
