@@ -1,0 +1,53 @@
+<app-doctorhome></app-doctorhome>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<form (ngSubmit)="bookappointment()">
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="./assets/img/image.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from earning your own money!</p>                        
+                    </div>
+                    <div class="col-md-9 register-right">                      
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Book Appointment</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Date</label><br>
+                                            <input type="date" class="form-control" placeholder="Id *" [(ngModel)]="appointment.date" name="id" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Time</label><br>
+                                            <input type="time" class="form-control" placeholder="First Name *" [(ngModel)]="appointment.time" name="firstName" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Description</label><br>
+                                            <input type="text" class="form-control" placeholder="Last Name *" [(ngModel)]="appointment.description" name="lastName" required />
+                                        </div>                                      
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Doctor ID</label><br>
+                                            <input type="number" class="form-control" placeholder="Doctor Id" [(ngModel)]="appointment.doctor_id" name="email" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Patient Id</label><br>
+                                            <input type="number"  name="password" class="form-control" placeholder="Patient Id *" [(ngModel)]="appointment.patient_id" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;   Medicines</label><br>
+                                            <input type="text"  name="password" class="form-control" placeholder="Medicines *" [(ngModel)]="appointment.medicines" required />
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Book Appointment"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form> 

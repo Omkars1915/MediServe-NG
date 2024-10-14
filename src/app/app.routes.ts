@@ -9,6 +9,8 @@ import { AdddoctorComponent } from './components/adddoctor/adddoctor.component';
 import { GetalldoctorsComponent } from './components/getalldoctors/getalldoctors.component';
 import { AddpatientComponent } from './components/addpatient/addpatient.component';
 import { GetallpatientsComponent } from './components/getallpatients/getallpatients.component';
+import { BookappointmentComponent } from './components/bookappointment/bookappointment.component';
+import { GetallappointmentsComponent } from './components/getallappointments/getallappointments.component';
 
 
 export const routes: Routes = [
@@ -41,6 +43,12 @@ export const routes: Routes = [
     },
     {
         path:'getallpatients',component:GetallpatientsComponent
+    },
+    {
+        path:'bookappointment',component:BookappointmentComponent
+    },
+    {
+        path:'getallappointments',component:GetallappointmentsComponent
     }
 
 ];

@@ -1,0 +1,48 @@
+<app-doctorhome></app-doctorhome>
+
+<br>
+<!-- Filter options -->
+<div class="form-group">
+    <!-- Patient Name Search -->
+    <div class="col-md-6">
+        <div class="button-container">
+      <label for="patientName">Enter Patient Id </label>
+      <input type="number" class="form-control" placeholder="Patient id" > &nbsp;  &nbsp;
+      <button class="btn btn-primary search-btn" >Search Appointment</button>  &nbsp;  &nbsp;
+      <button class="btn btn-primary search-btn"(click)="getallappointments()" >Get All Appointments</button>
+    </div>
+    </div>
+    <!-- Search Button -->
+     
+  </div>
+<table class="table table-sm table-light">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">Patient</th>
+            <th scope="col">Description</th>
+            <th scope="col">Medicines</th>
+        
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let appointment of showappoitment">
+            <td>{{appointment.id}}</td>
+            <td>{{appointment.date}}</td>
+            <td>{{appointment.time}}</td>
+            <td>{{ appointment.doctor?.firstName }}</td>
+            <td>{{ appointment.patient?.firstName }}</td>
+            <td>{{ appointment.description }}</td>
+            <td>{{ appointment.medicines }}</td>
+
+
+            <th><a class="btn btn-danger" >DELETE</a>&nbsp; <a class="btn btn-success"
+                    href="/editstudent/${doct].firstName}">EDIT</a>
+            </th>
+        </tr>
+    </tbody>
+</table>
