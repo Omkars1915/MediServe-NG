@@ -12,6 +12,7 @@ constructor(private http:HttpClient){}
 
   patientlogin(id:number,password:string):Observable<any>{
     const patientloginurl='http://localhost:8080/patient/patient-login'
+    sessionStorage.setItem("id",id.toString())
     return this.http.post<any>(patientloginurl,{id,password})
   }
 

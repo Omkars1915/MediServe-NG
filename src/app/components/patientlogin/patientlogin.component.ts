@@ -22,7 +22,6 @@ export class PatientloginComponent {
   patientlogin(){
     if(this.id && this.password){
     this.patientservice.patientlogin(this.id,this.password).subscribe((response)=>{
-
       if(response!=null){ 
         this.router.navigate(['/patienthome'])
       }else{

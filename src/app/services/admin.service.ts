@@ -12,8 +12,18 @@ export class AdminService {
 
   loginadmin(username:string,password:string):Observable<any>{
     const adminloginurl='http://localhost:8080/admin/login-admin'
+    sessionStorage.setItem("username",username)
     return this.http
       .post<any>(adminloginurl, { username, password })
+  }
+
+  isadminlogged(){
+    console.log("user login ho gaya hai")
+    let admin=sessionStorage.getItem("username")
+    return !(admin==null)
+  }
+  logoutadmin(){
+    sessionStorage.removeItem("username")
   }
 
   adddoctor(doctor:Doctor):Observable<any>{

@@ -12,6 +12,7 @@ import { GetallpatientsComponent } from './components/getallpatients/getallpatie
 import { BookappointmentComponent } from './components/bookappointment/bookappointment.component';
 import { GetallappointmentsComponent } from './components/getallappointments/getallappointments.component';
 import { PatienthomeComponent } from './components/patienthome/patienthome.component';
+import { AdminauthService } from './services/adminauth.service';
 
 
 export const routes: Routes = [
@@ -28,22 +29,22 @@ export const routes: Routes = [
         path:'patientlogin',component:PatientloginComponent
     },
     {
-        path:'adminhome',component:AdminhomeComponent
+        path:'adminhome',component:AdminhomeComponent,canActivate:[AdminauthService]
     },
     {
         path:'doctorhome',component:DoctorhomeComponent
     },
     {
-        path:'adddoctor', component:AdddoctorComponent
+        path:'adddoctor', component:AdddoctorComponent,canActivate:[AdminauthService]
     },
     {
-        path:'getalldoctors',component:GetalldoctorsComponent
+        path:'getalldoctors',component:GetalldoctorsComponent,canActivate:[AdminauthService]
     },
     {
         path:'addpatient',component:AddpatientComponent
     },
     {
-        path:'getallpatients',component:GetallpatientsComponent
+        path:'getallpatients',component:GetallpatientsComponent,canActivate:[AdminauthService]
     },
     {
         path:'bookappointment',component:BookappointmentComponent

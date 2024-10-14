@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './patienthome.component.css'
 })
 export class PatienthomeComponent {
-
+  username=sessionStorage.getItem("id");
 }
