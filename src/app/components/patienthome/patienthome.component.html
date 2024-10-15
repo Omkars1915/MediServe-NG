@@ -1,7 +1,44 @@
 <nav class="navbar animated-navbar">
     <ul>      
       <li><a [routerLink]="['/bookappointment']">Book Appointment</a></li>
-      <li><button class="nav-button">Get Previous Appointments</button></li>  
+      <li><button class="nav-button"  (click)="getappointmentbypatientid()">Get Previous Appointments</button></li>  
     </ul>
   </nav>
   {{username}}
+  <br>
+<!-- Filter options -->
+<div class="form-group">
+    <div class="col-md-6">
+        <div class="button-container">
+            <!-- <input type="number" class="form-control" placeholder="Patient Id" [value]="username" [(ngModel)]="username"> {{username}}&nbsp; &nbsp;  -->
+            <!-- <button class="btn btn-primary search-btn" (click)="getappointmentbypatientid()">Get Previous Appointments</button> &nbsp; &nbsp;  -->
+      
+        </div>
+    </div>
+</div>
+
+<!-- Appointments Table -->
+<table class="table table-sm table-light">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">Patient</th>
+            <th scope="col">Description</th>
+            <th scope="col">Medicines</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let appointment of appointments">
+            <td>{{ appointment.id }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.time }}</td>
+            <td>{{ appointment.doctor?.firstName }}</td>
+            <td>{{ appointment.patient?.firstName }}</td>
+            <td>{{ appointment.description }}</td>
+            <td>{{ appointment.medicines }}</td>
+        </tr>
+    </tbody>
+</table>

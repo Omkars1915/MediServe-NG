@@ -28,4 +28,10 @@ export class AppointmentService {
     const getallappointmentsurl='http://localhost:8080/appointment/getappointments'
     return this.http.get<any>(getallappointmentsurl)
   }
+
+  getappointmentsypatntid(patientid:number):Observable<any>{
+    const getallappointmentsbypatientid= `http://localhost:8080/appointment/getappointmentbypatientId/${patientid}`
+    return this.http.get<any>(getallappointmentsbypatientid)
+  }
+
 }
