@@ -19,9 +19,9 @@ export class AppointmentService {
     patient_id: null
   };
 
-  bookappointment(appointment:any):Observable<any>{
+  bookappointment(date:string,time:string,description:string,medicines:string,doctor_id:number,patient_id:number):Observable<any>{
     const bookappointmenturl='http://localhost:8080/appointment/bookappointment'
-    return this.http.post<Appointment>(bookappointmenturl,appointment)
+    return this.http.post<Appointment>(bookappointmenturl,{date,time,description,medicines,doctor_id,patient_id})
   }
 
   getallappointments():Observable<any>{
