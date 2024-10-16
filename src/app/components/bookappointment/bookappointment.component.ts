@@ -36,6 +36,7 @@ username:string|null=sessionStorage.getItem("id")
   doctor_id: any
   patient_id!:number
 
+  hello=null;
   // ngOnInit() {
   //   // Set the patient ID from session storage when the component initializes
   //   if (this.username) {
